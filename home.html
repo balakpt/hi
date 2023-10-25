@@ -4,15 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+
 </head>
 <body>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            display: flex;
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+        .list{
+            display: flex;
+            position: relative;
+            width: 1360px;
+            height: 60px;
+            background: gray;
+            
+            border-radius: 30px;
+            transform: translate(0px, 30px);
+            
+        
+        }
+        .list ul {
+            display: flex;
+            position: relative;
+            width: 300px;
+            left: 1000px;
+        }
+        .list ul li{
+            list-style: none;
+            position: relative;
+            width: 70px;
+            height: 60px;
+            z-index: 2;
+        }
+        .list ul li a{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+            font-size: 22px;
+        }
+        .list ul li a .icon{
+            position: relative;
+            display: block;
+            line-height: 65px;
+            font-size: 1.5em;
+            transition: 0.5s;
+            color: black;
+        }
+        .icon::before{
+            content: "";
+            position: absolute;
+            display: flex;
+            width: 40px;
+            height: 50px;
+            background: gray;
+            z-index: -1;
+            border-radius: 30px;
+            top: 8px;
+            left: -4px;
+        }
+        .list ul li.active a .icon{
+            transform: translateY(-30px);
+            color: black;
+        }
+        .list ul li a .text{
+            position: absolute;
+            color: black;
+            background: skyblue;
+            padding: 2px 7px;
+            border-radius: 12px;
+            font-weight: 400;
+            font-size: 0.75em;
+            letter-spacing: 0.05em;
+            transition: 0.5s;
+            opacity: 0;
+            transform: translateY(15px);
+        }
+        .list ul li.active a .text{
+            transform: translateY(-4px);
+            opacity: 1;
+        }
+
+      
+        
+       
+    </style>
+    <script>
+        
+           $(document ).on( "click", "i,li", function() {
+           $( this ).addClass('active').siblings().removeClass('active');
+           });
+
+    </script>
     <div class="conteiner">
+        
         <div class="list">
+         
             <ul>
-                <li>Home</li>
-                <li>Profile</li>
-                <li>About</li>
-                <li>More</li>
+                <li class="active">
+                    <a href="#">
+                        <span class="icon"><i class='bx bxs-home'></i></span>
+                         <span class="text">home</span>
+                    </a>
+                </li>
+                  <li>
+                    <a href="#">
+                        <span class="icon"><i class='bx bxs-home'></i></span>
+                         <span class="text">profile</span>
+                    </a>
+                </li>
+                  <li>
+                    <a href="#">
+                        <span class="icon"><i class='bx bxs-home'></i></span>
+                         <span class="text">contanct</span>
+                    </a>
+                </li>
+                  <li>
+                    <a href="#">
+                        <span class="icon"><i class='bx bxs-home'></i></span>
+                         <span class="text">settings</span>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
