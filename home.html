@@ -18,16 +18,29 @@
             display: flex;
             position: relative;
             width: 100%;
-            height: 100vh;
+            height: 100%;
+            background: linear-gradient(to right,blue,pink);
         }
         .list{
-            display: flex;
-            position: relative;
+            display:flex;
+            position: sticky;
             width: 1360px;
             height: 60px;
-            background: gray;
+            background: white;
+            top: 10px;
+            z-index: 5;
+            transform: translate(0px, 30px);
             
-            border-radius: 30px;
+        
+        }
+        .list{
+            display:flex;
+            position: sticky;
+            width: 1360px;
+            height: 60px;
+            background: white;
+            top: -10px;
+            z-index: 5;
             transform: translate(0px, 30px);
             
         
@@ -37,6 +50,8 @@
             position: relative;
             width: 300px;
             left: 1000px;
+            
+           
         }
         .list ul li{
             list-style: none;
@@ -44,6 +59,7 @@
             width: 70px;
             height: 60px;
             z-index: 2;
+           
         }
         .list ul li a{
             position: relative;
@@ -54,6 +70,7 @@
             width: 100%;
             text-align: center;
             font-size: 22px;
+           
         }
         .list ul li a .icon{
             position: relative;
@@ -62,27 +79,41 @@
             font-size: 1.5em;
             transition: 0.5s;
             color: black;
+            background: transparent;
+
+            
         }
-        .icon::before{
+        .icon.active :before {
             content: "";
             position: absolute;
             display: flex;
             width: 40px;
             height: 50px;
-            background: gray;
+            background: red;
             z-index: -1;
             border-radius: 30px;
             top: 8px;
             left: -4px;
         }
         .list ul li.active a .icon{
-            transform: translateY(-30px);
+            transform: translateY(-5px);
             color: black;
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 30px;
+            background: white;
+            border-radius: 10px;
+            justify-content: center;
+            transition: 1s;
+            
+           
         }
+       
         .list ul li a .text{
             position: absolute;
             color: black;
-            background: skyblue;
+           
             padding: 2px 7px;
             border-radius: 12px;
             font-weight: 400;
@@ -90,16 +121,23 @@
             letter-spacing: 0.05em;
             transition: 0.5s;
             opacity: 0;
-            transform: translateY(15px);
+            transform: translateY(35px);
         }
         .list ul li.active a .text{
-            transform: translateY(-4px);
+            transform: translateY(37px);
             opacity: 1;
-        }
+        } 
+        .hi{
+            width: 300px;
+            height: 300px;
+            background: red;
+            z-index: 2;
+            position: relative;
+            left: 100px;
+            margin-top:10px ;
 
-      
+        }
         
-       
     </style>
     <script>
         
@@ -120,26 +158,39 @@
                     </a>
                 </li>
                   <li>
-                    <a href="#">
-                        <span class="icon"><i class='bx bxs-home'></i></span>
+                    <a href="#"> 
+                        <span class="icon"><i class='bx bxl-facebook-circle'></i></i></span>
                          <span class="text">profile</span>
                     </a>
                 </li>
                   <li>
                     <a href="#">
-                        <span class="icon"><i class='bx bxs-home'></i></span>
+                        <span class="icon"><i class='bx bxs-contact'></i></span>
                          <span class="text">contanct</span>
                     </a>
                 </li>
                   <li>
                     <a href="#">
-                        <span class="icon"><i class='bx bxs-home'></i></span>
+                        <span class="icon"><i class='bx bxs-cog'></i></span>
                          <span class="text">settings</span>
                     </a>
                 </li>
             </ul>
         </div>
+        <div class="hi"> hhsjdsbdbsdbhsb</div>
+    <div class="hi"></div>
+    <div class="hi"></div>
+    <div class="hi"></div>
+    <div class="hi"></div>
+    <div class="hi"></div>
+    <div class="hi"></div>
+    <div class="hi"></div>
+    <div class="hi"></div>
+    <div class="hi"></div>
+    <div class="hi"></div>
     </div>
+    
+    
     
 </body>
 </html>
